@@ -1,0 +1,435 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 2, 2024, 11:27:00 AM
+    Author     : luong
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #fdc0c8;
+    /* background-image: linear-gradient(to bottom right, #fdc0c8, pink); */
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn chỉnh các phần tử theo chiều ngang */
+    align-items: center;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: #333;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover {
+    color: #e74c3c;
+    /* Đổi màu chữ khi di chuột qua */
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    /* Khi di chuột qua, độ bóng mở rộng */
+    transform-origin: bottom left;
+}
+
+header h1 {
+    font-size: 24px;
+    /* Hoặc giá trị nào đó mà bạn muốn */
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+form .search-container {
+    position: relative;
+}
+
+header form input[type="text"] {
+    width: 250px;
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa các ô input */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    border: 1px solid #ddd;
+    /* Đường viền ô input */
+    border-radius: 30px;
+    /* Góc bo tròn */
+}
+
+header form button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa ô input và nút submit */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    background-color: transparent;
+    /* Loại bỏ màu nền nút submit */
+    border: none;
+    /* Loại bỏ đường viền của nút submit */
+    cursor: pointer;
+    /* Biến con trỏ thành bàn tay khi di chuột qua */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+/* form button i {
+  color: #fff;
+} */
+
+header form button:hover i {
+    color: #e74c3c;
+    /* Đổi màu chữ biểu tượng khi di chuột qua */
+}
+
+nav {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+/* main */
+
+#w3-wrapper {
+    margin: 5px 100px;
+    /* text-decoration: #333; */
+    /* background-color: #fdc0c8; */
+}
+.text-color1 {
+    color: #fdc0c8;
+    padding: 2px;
+}
+.txt-666 {
+    color: #333;
+}
+
+.container {
+    /* margin: 5px; */
+    background-color: white;
+    display: flex;
+}
+
+.colm-main1 {
+    width: 25%;
+}
+.box-infor {
+    height: 50px;
+    display: flex;
+    padding: 10px 0;
+    display: block;
+    /* border: 1px solid gainsboro; */
+    padding-left: 15px;
+}
+.avatar-profile {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#avat {
+    width: 100%;
+}
+.box-menu {
+    height: auto;
+    padding: 5px;
+}
+
+.item-menu {
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+}
+
+.item-menu.active {
+    background-color: #ddd;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.colm-main2 {
+    background: #f1eff0;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.colm{
+    border-right:1px solid gray;
+    width: 50%;
+}
+.colm .content{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 8px;
+}
+.content2{
+    display: flex;
+}
+.hinhanh{
+    width: 160px;
+    height: 100%;
+    display: inline-block;
+}
+.hinhanh img{
+    width: 98px;
+    height: 98px;
+    margin: 20px;
+}
+.thongtin{
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.thongtin .nhap{
+    margin: 20px;
+}
+.thongtin .nhap input{
+    width: 100%;
+    height: 30px;
+}
+.ngaysinh {
+    margin-top: 10px
+}
+.capnhat{
+    font-size: 20px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+.ngaysinh select{
+    width: 70px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.thaydoi1{
+    margin-left: 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+.thaydoi1 i{
+    font-size: 30px;
+    display: inline-block;
+}
+.thaydoi2{
+    width: 160px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.thaydoi3{
+    display: inline-block;
+    border: 1px solid gray;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: right;
+    margin-right: 20px;
+}
+.thaydoi3:hover{
+    background-color: aquamarine;
+}
+.cach{
+    height: 15px;
+}
+
+
+/* slogan-fooder */
+.slogan {
+    margin: 5px 100px;
+    background-color: #fdc0c8;
+}
+
+.slogan-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-top: 2px solid #fdc0c8;
+}
+
+.slogan-colm {
+    background-color: green;
+    /* border: 1px solid black; */
+    height: 150px;
+}
+
+.col1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-slg {
+    background-color: white;
+    /* border: 1px solid black; */
+    height: auto;
+    display: inline;
+}
+.b1 img {
+    display: block;
+    padding: 10px 43px;
+    width: 75px;
+}
+
+.text-center {
+    font-size: 15px;
+    color: #fdc0c8;
+    font-weight: 500;
+    margin: 5px;
+    text-align: center;
+}
+.bx-hotline {
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.btn-slogan {
+    padding: 3px 20px;
+    width: 65%;
+    height: 25px;
+    background: #fdc0c8;
+    color: white;
+    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: none;
+}
+.slg2 {
+    padding-top: 10px;
+}
+
+/* fooder */
+.footer-wapper {
+    margin: 5px 100px;
+    background-color: #333;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 260px 240px 220px 594px;
+}
+.foot-colm {
+    background-color: #fdc0c8;
+    height: 245px;
+    /* border: 1px solid green; */
+}
+.item-footer {
+    margin: 10px 15px;
+    color: white;
+    font-size: 15px;
+}
+.text-color2 {
+    color: #e74c3c;
+}
+.icon-footer {
+    margin-top: 30px;
+    display: flex;
+    /* margin-left: 20px; */
+}
+.icon-social {
+    margin: 5px 10px;
+}
+.img .item-footer {
+    height: 25px;
+}
+.col6 {
+    padding-left: 20px;
+    color: white;
+}
+#formsub {
+    display: flex;
+    align-items: center;
+}
+
+.block-input {
+    width: 300px;
+    padding-right: 60px;
+    background: white;
+    border-radius: 30px;
+}
+.input-news {
+    width: 100%;
+    height: 38px;
+    float: left;
+    border-radius: 30px;
+    padding-left: 20px;
+    border: #fdc0c8;
+}
+.btn-sub {
+    height: 40px;
+    line-height: 38px;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 19px;
+    margin-right: -1px;
+    margin-top: 0px;
+    padding: 0 20px;
+    background: #e74c3c;
+    border: #e74c3c;
+}

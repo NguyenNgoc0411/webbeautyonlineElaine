@@ -1,0 +1,554 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 25, 2023, 10:27:02 PM
+    Author     : 2021
+*/
+
+#login {
+    padding: 15px;
+    
+    
+}
+#login .sub_login {
+    width: 300px;
+    left: 1020px;
+    top: 50px;
+    position: absolute;
+    padding-top: 20px;
+    z-index: 1000;
+    /* display: ; */
+    background: #fff;
+    border: 1px solid #aaaaaa;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #333333;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#login .sub_login.show{
+    opacity: 1;
+    pointer-events: all;
+}
+.text_login {
+    margin-bottom: 5px;
+
+}
+#login .block_login 
+{
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid #dbdbdb;
+    
+    
+}
+.block_login a {
+    text-decoration: none;
+}
+.block_login_more 
+{
+    padding: 10px 20px 0 20px;
+    
+}
+.text_more_login 
+{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.alert_login
+{
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 13px;
+}
+#login #login_button_1
+{
+    width: 92%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#login a:hover {
+    transform: none;
+    color: none;
+    
+}
+
+
+#login a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: none;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: none;
+    transition:none;
+    /* Hiệu ứng chuyển động */
+}
+ .btn_popup_login
+{
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+.popup_register
+{
+    text-decoration: none;
+    color: #326e51;
+    font-size: 13px;
+}
+
+/* css popup_login*/
+
+#popup_login
+{
+    margin: 30px auto;
+    width: 420px;
+    background: #fff;
+}
+#popup_login form{
+    display: block;
+}
+#popup_login .popup_header_login #close_btn_login {
+        /* position: absolute;
+        right: 0px;
+        top: 0px; */
+        position: relative;
+        right: -400px;
+        top:-10px;
+        /* overflow: visible; */
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    
+}
+/* button .close_btn{
+    overflow: visible;
+    cursor: pointer;
+    border: 0;
+    
+    display: block;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+}
+.close_btn {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    right: 550px;
+    top: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 0 18px 10px;
+    color: #FFF;
+    background: #666;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace;
+} */
+#popup_login .sub_login {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    
+}
+#popup_login  .block_login {
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+#modal {
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6);
+    
+    z-index: 1000;
+/*    opacity: 0;
+    pointer-events: none;*/
+    color: #333333;
+
+
+}
+
+#modal.show {
+    opacity: 1;
+    pointer-events: all;
+
+}
+.popup_login_content 
+{
+    background: #fff;
+    
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 1000;
+}
+#popup_login #login_button
+{
+    width: 95%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.form_group {
+    margin-bottom: 15px;
+    z-index: 1000;
+}
+.popup_login_content .form-control {
+    padding-right: 30px;
+    font-size: 13px;
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+.popup_login_content .form-control:focus
+{
+    
+   
+    border: 1px solid rgb(178, 225, 238);
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px rgb(195, 231, 240);
+    box-shadow:   1px 1px 10px  rgb(173, 237, 230);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+}
+.popup_login_content .popup_forgot 
+{
+    float: right !important;
+    color: #326e51;
+}
+
+#popup_login .text_login {
+    margin-bottom: 5px;
+
+}
+
+#popup_login .block_login a {
+    text-decoration: none;
+}
+#popup_login .block_login_more 
+{
+    padding: 10px 20px 0 20px;
+    
+    
+}
+#popup_login .text_more_login 
+{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+#login_button_1
+{
+    width: 92%;
+    padding-top: 15x;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#popup_login .btn_popup_login
+{
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+#popup_login .popup_register
+{
+    text-decoration: none;
+    color: #326e51;
+    font-size: 13px;
+}
+/* popupregister*/
+#register {
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    color: #333333;
+}
+#register.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#register .showRegisterMessage
+{
+    margin-bottom: 10px;
+    color: red;
+}
+
+
+.block_popup_register {
+    margin: 40px auto;
+    width: 420px;
+    background: #fff;
+
+
+}
+#register .popup_header_login #close_btn_register
+{
+    position: relative;
+    right: -400px;
+    top:-10px;
+    /* overflow: visible; */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+#register .popup_content 
+{
+    margin-top: -5px;
+    
+}
+.text_register 
+{
+    margin-bottom: 10px;
+}
+#register form{
+    display: block;
+
+}
+#register .form_group {
+    font-size: 13px;
+    margin-bottom:15px ;
+}
+#register input[type="text"],input[type="password"],input[type="email"]
+{
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+.code_register 
+{
+    position: relative;
+}
+.error
+
+{
+    color: #a94442;
+}
+#register .code_register button{
+    width: 100px;
+    background: #f60;
+    color: #fff;
+    border: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    height: 100%;
+
+}
+.form-control {
+    display: block;
+    outline: none;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+#register .form_group
+{
+    font-size: 13px;
+    display: block;
+   
+    
+}
+
+
+#register .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    
+}
+#register .col_register
+{   position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+
+}
+
+#register .radio_inline
+{
+    position: relative;
+    display: inline-block;
+    margin-left: -5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+#register .radio_inline input[type="radio"]
+{
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 4px;
+   
+}
+#register .group_birthday 
+{
+    display: flex;
+    justify-content: space-between;
+}
+#register .group_birthday .col_register_1
+{
+    
+
+    position: relative;
+    min-height: 1px;
+    width: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#register .btn_register
+{
+    width: 95%;
+
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    margin-top:10px;
+    margin-left: 17px;
+    margin-bottom: 20px;
+}
+#register .block_login
+{
+    padding: 20px 20px;
+    border-top: 1px solid #eaeaea;
+    font-size: 13px;
+    
+
+}
+#register .space_bottom 
+{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    
+}
+#register .block_login a {
+    color: #333333;
+    text-decoration: none;
+    outline: 0;
+
+
+}
+#register .form-control:focus
+{
+    
+   
+    border: 1px solid rgb(178, 225, 238);
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px rgb(195, 231, 240);
+    box-shadow:   1px 1px 10px  rgb(173, 237, 230);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+}
+#register:target
+{
+    display: block;
+}
+.form_group.invalid .form-control {
+    
+    border: 1px solid #f33a58 ;
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px #f33a58;
+    box-shadow:   1px 1px 10px  #f33a58;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form_group.invalid .form_message {
+    color: #f33a58;
+}
+
+.form_message {
+    font-size: 10px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+
+
+

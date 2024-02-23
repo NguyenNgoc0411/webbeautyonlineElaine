@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    
+}
+
+header {
+    width: 100%;
+    background-color: #fdc0c8;
+    /* background-image: linear-gradient(to bottom right, #fdc0c8, pink); */
+    color: #333;
+    
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn chỉnh các phần tử theo chiều ngang */
+    align-items: center;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: #333;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover {
+    color: #e74c3c;
+    /* Đổi màu chữ khi di chuột qua */
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    /* Khi di chuột qua, độ bóng mở rộng */
+    transform-origin: bottom left;
+}
+
+header h1 {
+    font-size: 24px;
+    /* Hoặc giá trị nào đó mà bạn muốn */
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+form .search-container {
+    position: relative;
+}
+
+header form input[type="text"] {
+    width: 250px;
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa các ô input */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    border: 1px solid #ddd;
+    /* Đường viền ô input */
+    border-radius: 30px;
+    /* Góc bo tròn */
+}
+
+header form button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa ô input và nút submit */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    background-color: transparent;
+    /* Loại bỏ màu nền nút submit */
+    border: none;
+    /* Loại bỏ đường viền của nút submit */
+    cursor: pointer;
+    /* Biến con trỏ thành bàn tay khi di chuột qua */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+/* form button i {
+    color: #fff;
+} */
+
+header form button:hover i {
+    color: #e74c3c;
+    /* Đổi màu chữ biểu tượng khi di chuột qua */
+}
+nav {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+#my_order_page 
+{
+    margin-top: 50px;
+    width: 100%;
+    float: left;
+    
+    
+    
+}
+.left_order {
+    width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#my_order_page a{
+    text-decoration: none;
+    color: black;
+}
+#my_order_page .width_common{
+    
+    float: left;
+    width: 100%;
+    
+}
+#my_order_page .block_menu_profile
+{
+    background-color:white;
+    width: 25%;
+}
+#block_chitietdonhang{
+    
+    width:72%;
+    background-color:white;
+    float: right;
+    
+    margin-right: 10px;
+    
+    
+}
+.block_info_profile
+{
+    padding: 20px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.block_info_profile img {
+    width: 70px;
+}
+.text_profile{
+    margin-left: 10px;
+ 
+}
+#my_order_page .menu_info {
+    
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    
+}
+#my_order_page .menu_info a {
+    display: block;
+    margin-bottom: 20px;
+}
+#block_chitietdonhang .block_fillter_donhang{
+    padding: 20px;
+    margin-top: 10px;
+}
+.text_fillter_donhang{
+    color: #e74c3c;
+    font-size: 20px;
+    border-bottom: 0.5px solid #eee ;
+    padding-bottom: 15px;
+
+    
+}
+.text_fillter_donhang strong {
+    position: relative;
+    z-index: 2;
+    border-bottom: 3px solid #ff6600;
+    color: #ff6600;
+    padding: 14px;
+}
+.tab_sub_fillter_donhang
+{
+    margin-top: 20px;
+
+}
+.item_sub_filler{
+    display: inline-block;
+    padding: 8px 20px;
+    color: #000;
+    background: #f2f1f6;
+    margin-right: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+#block_chitietdonhang .item_sub_filler:hover,.active {
+    background: #ff6600;
+    color: white;
+}
+.container_list_order
+{
+    margin-top: 20px;
+}
+.item_donhang
+{
+    border: 1px solid #f2f1f6;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.item_donhang a {
+    display: block;
+    position: relative;
+    padding: 5px 10px 5px 10px;
+    background: #fcfcfc;
+}
+.item_donhang .txt_color {
+    color: #326e51 ;
+    
+}
+ .item_donhang .status_order{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 10px;
+    width: 80px;
+    background-color: #fdc0c8;
+    text-align: center;
+ }
+.item_donhang  .block_txt_chitiet
+ {
+    
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #326e51;
+ }
+.item_donhang  .left_item {
+    width: 85%;
+}
+
+ .item_donhang .txt_1 {
+    color: #ff6600 ;
+    position: relative;
+ }
+ 
+ .list_sanpham_order .item_order {
+    display: inline-block;
+    vertical-align: top;
+    width: 45.5%;
+    padding: 10px;
+    
+}
+ .item_order .img_item_order {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+ }
+ .item_order .img_item_order .item_img {
+    width: 100px;
+ }
+ .item_order .info_item  strong {
+    color: #326e51;
+ }
+ .item_order .text_info_item {
+    line-height: 18px;
+    font-size: 13px;
+    overflow: hidden;
+    background: #fff;
+    font-weight: 400;
+    color: #326e51;
+ }
+ .item_order .txt strong{
+    color: #ff6600;
+ }
+ .block_btn_huydon
+ {
+    text-align: right;
+    
+ }
+#block_chitietdonhang .block_btn_huydon .huyhoacmua {
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+
+}
+.block_btn_huydon .btn {
+    margin-left: 10px;
+    padding: 7px 15px;
+
+    width: 120px;
+}
+#block_chitietdonhang .block_btn_huydon .danhgia_btn
+{
+    background: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+

@@ -1,0 +1,168 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 1, 2024, 2:59:05 PM
+    Author     : 2021
+*/
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 1, 2024, 7:50:19 AM
+    Author     : 2021
+*/
+
+.content_information {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    width: 1024px;
+    
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.content_information_fill {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    width: 1024px;
+    
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.check_box_sub {
+    position: absolute;
+    top:7px;
+    left: 0;
+    cursor: pointer;
+    
+}
+.block_info_container
+{
+    position: relative;
+}
+.content_thongtin{
+    margin-left: 15px;
+}
+.text_diachi{
+    margin-left: 10px;
+}
+.block_add_new {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-control{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 30px;
+    line-height: 1.42857;
+    padding: 6px 10px 6px 6px;
+    width: 98%;
+    cursor: pointer;
+    
+    
+}
+.form-group select{
+    height: 40px;
+    width: 100%;
+    
+    
+
+}
+.txt_del_info{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    position: absolute;
+    right:  0;
+    top: 0;
+    cursor: pointer;
+}
+.text_del_info img {
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    max-width: 100%;
+}
+.add_new_address{
+    display: inline-block;
+}
+.btn_xemthem_tittle {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    display: inline-block;
+    
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;;
+}
+.button-group .btn {
+    width: auto;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+.btn_site_cancel {
+    background: #ddd;
+    border: 1px solid #ddd;
+    color: #999;
+    width: 100px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.btn_site_update {
+    background: #f60;
+    border: 1px solid #ddd;
+    color: white;
+    width: 100px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.item_info_check {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left: 0;
+
+    padding: 3px;
+}
+.item_info_check span {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    
+    
+    
+}
+
+

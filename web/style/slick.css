@@ -1,0 +1,46 @@
+.slick-initialized .slick-slide {
+    margin: 0 10px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    background: none;
+    border: none;
+}
+
+.slick-prev {
+    left: -10px;
+}
+
+.slick-next {
+    right: -10px;
+}
+
+.slick-dots {
+    position: absolute;
+    list-style-type: none;
+    display: flex !important;
+    gap: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slick-dots button{
+    color: transparent;
+    padding: 5px;
+    width: 5px;
+    height: 5px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.3s linear;
+}
+
+.slick-dots .slick-active button {
+    background-color: #e74c3c;
+}

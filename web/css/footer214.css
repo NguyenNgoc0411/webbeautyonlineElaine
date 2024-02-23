@@ -1,0 +1,158 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 2, 2024, 12:50:10 PM
+    Author     : luong
+*/
+
+/* slogan-fooder */
+footer {
+    width: 100%;
+    text-align: center;
+    /*margin: 50px;*/
+    /*margin-top: 50px;*/
+    /*display: inline-block;*/
+    /*min-height: 100vh;*/
+}
+.slogan {
+    /*width: 1340px;*/
+    /*margin-left: 80px;*/
+    background-color: #fdc0c8;
+}
+
+.slogan-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-top: 2px solid #fdc0c8;
+}
+
+.slogan-colm {
+    background-color: green;
+    /* border: 1px solid black; */
+    height: 150px;
+}
+
+.col1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-slg {
+    background-color: white;
+    /* border: 1px solid black; */
+    height: auto;
+    display: inline;
+}
+.b1 img {
+    display: block;
+    padding: 10px 43px;
+    width: 75px;
+}
+
+.text-center {
+    font-size: 15px;
+    color: #fdc0c8;
+    font-weight: 500;
+    margin: 5px;
+    text-align: center;
+}
+.bx-hotline {
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+.btn-slogan {
+    padding: 3px 20px;
+    width: 65%;
+    height: 25px;
+    background: #fdc0c8;
+    color: white;
+    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: none;
+}
+.slg2 {
+    padding-top: 10px;
+}
+
+/* fooder */
+.footer-wapper {
+
+    width: 100%;
+}
+.footer-container {
+    width: 100%;
+    display: flex;
+    background-color: #fdc0c8;
+    justify-content: space-evenly;
+}
+.foot-colm {
+    height: 245px;
+    /*border: 1px solid green;*/
+}
+.item-footer {
+    margin: 10px 15px;
+    color: white;
+    font-size: 15px;
+}
+.text-color2 {
+    color: #e74c3c;
+}
+.icon-footer {
+    margin-top: 30px;
+    display: flex;
+    /* margin-left: 20px; */
+}
+.icon-social {
+    margin: 5px 10px;
+}
+.img .item-footer {
+    height: 25px;
+}
+.col6 {
+    padding-left: 20px;
+    color: white;
+}
+#formsub {
+    display: flex;
+    align-items: center;
+}
+
+.block-input {
+    width: 300px;
+    padding-right: 60px;
+    background: white;
+    border-radius: 30px;
+}
+.input-news {
+    width: 100%;
+    height: 38px;
+    float: left;
+    /*border-radius: 30px;*/
+    padding-left: 20px;
+    border: #fdc0c8;
+}
+.btn-sub {
+    height: 40px;
+    line-height: 38px;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 19px;
+    margin-right: -1px;
+    margin-top: 0px;
+    padding: 0 20px;
+    background: #e74c3c;
+    border: #e74c3c;
+}

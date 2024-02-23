@@ -1,0 +1,324 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 2, 2024, 2:10:54 PM
+    Author     : luong
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+
+}
+
+.header_booking {
+    width: 100%;
+    background-color: #fdc0c8;
+    /* background-image: linear-gradient(to bottom right, #fdc0c8, pink); */
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+
+
+    /* Căn chỉnh các phần tử theo chiều ngang */
+
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+}
+.header_booking a {
+    text-decoration: none;
+    outline: 0;
+
+    font-size: 24px;
+
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: #333;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+
+
+
+.block_right_step{
+    float: right;
+    margin: 10px 10px 0 0;
+    position: relative;
+    margin-left: 100px;
+}
+.block_right_step::before{
+    display: inline-block;
+    background: #b6b3b3;
+    height: 2px;
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    z-index: 1;
+}
+.step_item {
+    position: relative;
+    z-index: 2;
+    background: #fdc0c8;
+    padding: 0 10px;
+    margin: 0 10px 0 0;
+    float: left;
+}
+.active_4{
+    color: #ff6600;
+}
+.step_item:last-child {
+    margin: 0;
+}
+.step_item span {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+
+    border-radius: 50%;
+    margin-right: 5px;
+
+    background: #f60;
+    color: #fff;
+}
+.content_checkout {
+    background: #e7ebee;
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+.content_checkout .container {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*margin-top: 100px;*/
+}
+#checkout_col_left {
+    width: 66%;
+    float: left;
+    padding-right: 20px;
+}
+.checkout_block {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.49);
+}
+.title_block_checkout {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.right{
+    float:right
+}
+.title_block_checkout a {
+    font-size: 12px;
+    color: #306e51;
+}
+.content_thongtin{
+    margin-top: 10px;
+}
+.space_bottom_5 {
+    margin-bottom: 5px;
+}
+.status_lienhe {
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: 11px;
+    color: #fff;
+    background: #326e51;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+/*.item_dot_check {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left: 0;
+
+    padding: 3px;
+}*/
+/*.item_dot_check span {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #f60;
+}*/
+.space_bottom_5 span {
+    margin-left: 10px;
+}
+.item_phuongthuc .space_bottom_5{
+    margin-left: 10px;
+
+}
+.content_relative{
+    display: flex;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#checkout_col_right {
+    width: 33%;
+    margin-left: 700px;
+}
+.block_donhang .item_list_donhang {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+
+    border-bottom: 1px dotted #cecaca;
+}
+.block_donhang .thumb_donhang {
+    width: 21%;
+    padding: 0 10px;
+    float: left;
+    margin: 0;
+}
+img {
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    max-width: 100%;
+}
+/* .info_item_donhang {
+    width: 79%;
+    float:right;
+    
+}
+.giathanh {
+    width: 100%;
+    float: left;
+    font-size: 13px;
+}
+.block_donhang .item_list_donhang:last-child {
+    border-bottom: 0;
+} */
+.title_sanpham_donhang
+{
+    font-size: 14px;
+}
+.giathanh {
+    width: 100%;
+
+    font-size: 13px;
+}
+.giathanh span {
+    float: right;
+    color: #f60;
+}
+
+.item_tamtinh {
+    display: flex;
+    justify-content: space-between
+}
+
+.tamtinh_right {
+    /*float: right;*/
+    color: #f60;
+}
+.tamtinh_left{
+    /*float: left;*/
+    margin-bottom: 10px;
+}
+.form_group {
+    /*margin-bottom: 10px;*/
+    display: flex;
+    /*position: relative;*/
+}
+
+.form_control {
+    border: 1px solid #ccc;
+    border-radius: unset !important;
+    color: #555;
+    font-size: 14px;
+    width: 80% !important;
+}
+
+.chuasudung {
+    width: 80px;
+    height: 34px;
+    background: #fdc0c8;
+    color: #fff;
+    border: 0;
+    /*position: absolute;*/
+    /*right: 1px;*/
+    /*top: 28px;*/
+}
+.block_phivanchuyen {
+    padding-top: 15px;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+.border_top_checkout {
+    border-top: 1px solid #ccc;
+}
+.item_tamtinh_1{
+    margin-bottom: 25px;
+}
+.item_tamtinh_1 strong {
+    float: left;
+
+}
+.item_tamtinh_1 span {
+    float: right;
+
+
+}
+.block_total_order .item_tamtinh{
+    margin-top: 10px;
+}
+.btn_dathang .btn_dat {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    background: #f60;
+    border-radius: 3px;
+    height: 40px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+.block_total_order  .thanhtientong {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.none {
+    display: none;
+}
+
+.popup{
+    
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #90EE90;
+}
+

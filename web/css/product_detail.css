@@ -1,0 +1,414 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 30, 2023, 1:45:43 PM
+    Author     : luong
+*/
+
+
+body {
+    font-family: 'open sans';
+    overflow-x: hidden;
+}
+
+
+.preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 996px) {
+    .preview {
+        margin-bottom: 20px;
+    }
+}
+
+.preview-pic {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px;
+}
+
+.preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%;
+}
+
+.preview-thumbnail.nav-tabs li img {
+    max-width: 100%;
+    display: block;
+}
+
+.preview-thumbnail.nav-tabs li a {
+    padding: 0;
+    margin: 0;
+}
+
+.preview-thumbnail.nav-tabs li:last-of-type {
+    margin-right: 0;
+}
+
+.tab-content {
+    overflow: hidden;
+}
+
+.tab-content img {
+    width: 100%;
+    -webkit-animation-name: opacity;
+    animation-name: opacity;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+
+.card {
+    /* background: #eee; */
+    /* padding: 3em; */
+    line-height: 1.5em;
+    /* background: #FFF none repeat scroll 0% 0%; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 997px) {
+    .wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.colors {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.product-title,
+.price,
+.sizes,
+.colors {
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+
+.checked,
+.price span {
+    color: #ff9f1a;
+}
+
+.product-title,
+.rating,
+.product-description,
+.price,
+.vote,
+.sizes {
+    margin-bottom: 15px;
+}
+.product-description {
+    /**/    max-width: 400px; /* Đặt kích thước tối đa */
+    overflow: hidden; /* Tránh tràn nội dung ra khỏi thẻ nếu nó quá lớn */
+    text-overflow: ellipsis; /* Hiển thị dấu chấm (...) nếu nội dung quá lớn */
+    white-space: nowrap;
+}
+.product-title {
+    margin-top: 0;
+}
+
+.size {
+    margin-right: 10px;
+}
+
+.size:first-of-type {
+    margin-left: 40px;
+}
+
+.color {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 2em;
+    width: 2em;
+    border-radius: 2px;
+}
+
+.color:first-of-type {
+    margin-left: 20px;
+}
+.add-to-cart {
+    margin: 50px;
+    margin-top: 15px;
+    margin-left: 40%;
+    /*width: 50%;*/
+
+}
+.add-to-cart,
+.like {
+    background: #fdc0c8;
+    padding: 1.2em 1.5em;
+    border: none;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+}
+
+.add-to-cart:hover,
+.like:hover {
+    background: #fdc0c8;
+    color: #fff;
+}
+
+.not-available {
+    text-align: center;
+    line-height: 2em;
+}
+
+.not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff;
+}
+
+.tooltip-inner {
+    padding: 1.3em;
+}
+
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.with_common {
+    width: 100%;
+    float: left;
+}
+
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    list-style-type: none
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-width: 0;
+}
+
+.nav-tabs>li>a {
+    border: none;
+    color: #666;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li>a:hover {
+    border: none;
+    color: #f3f3f3 !important;
+    background: transparent;
+}
+
+.nav-tabs>li>a::after {
+    content: "";
+    background: #4285F4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.nav-tabs>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+    transform: scale(1);
+}
+
+.tab-nav>li>a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+    background-color: #eaece4;
+    /*background: transparent;*/
+}
+/* Ví dụ với màu vàng cho tab content active */
+.tab-content > .tab-pane.active {
+}
+
+.tab-content {
+    padding: 20px
+}
+
+.product-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #eaece4;
+    border: #4285F4;
+}
+
+.product-box>img{
+    vertical-align: middle;
+
+}
+.ul-img {
+    margin-top: 0px;
+    display: flex;
+    width: 500px;
+    height: auto;
+    border: none;
+}
+.ul-img li {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.ul-img li img {
+    width: 100px; /* Đặt kích thước mong muốn cho hình ảnh */
+    height: auto; /* Giữ tỷ lệ khung hình khi thay đổi kích thước */
+    border: 1px solid #ddd; /* Đường viền cho hình ảnh */
+    border-radius: 5px; /* Bo tròn mép của hình ảnh */
+}
+
+.tab-content {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.tab-li {
+    padding: 1.2em 1.5em;
+    margin-left: 15px;
+    border: none;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+}
+.tab-li.li{
+    display: none;
+}
+.tab-li.active {
+    background: #fdc0c8;
+    border-radius: 5px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.lightbox__inner {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100px;
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox__content img {
+    display: block;
+    max-width: 800px;
+    min-height: 100px;
+}
+.lightbox__close {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__close:hover {
+    color: rgba(0, 0, 0, 0.8);
+}

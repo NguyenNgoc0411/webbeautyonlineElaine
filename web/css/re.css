@@ -1,0 +1,1122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #fdc0c8;
+    /* background-image: linear-gradient(to bottom right, #fdc0c8, pink); */
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn chỉnh các phần tử theo chiều ngang */
+    align-items: center;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: #333;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover {
+    color: #e74c3c;
+    /* Đổi màu chữ khi di chuột qua */
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    /* Khi di chuột qua, độ bóng mở rộng */
+    transform-origin: bottom left;
+}
+
+header h1 {
+    font-size: 24px;
+    /* Hoặc giá trị nào đó mà bạn muốn */
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+form .search-container {
+    position: relative;
+}
+
+header form input[type="text"] {
+    width: 250px;
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa các ô input */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    border: 1px solid #ddd;
+    /* Đường viền ô input */
+    border-radius: 30px;
+    /* Góc bo tròn */
+}
+
+header form button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa ô input và nút submit */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    background-color: transparent;
+    /* Loại bỏ màu nền nút submit */
+    border: none;
+    /* Loại bỏ đường viền của nút submit */
+    cursor: pointer;
+    /* Biến con trỏ thành bàn tay khi di chuột qua */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+/* form button i {
+    color: #fff;
+} */
+
+header form button:hover i {
+    color: #e74c3c;
+    /* Đổi màu chữ biểu tượng khi di chuột qua */
+}
+
+nav {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+
+.container {
+    margin: 0 50px 0 50px;
+}
+
+.slide-bar {
+    margin: 20px 0 20px 0;
+    display: flex;
+}
+
+.category-box {
+    width: 220px;
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: auto;
+}
+
+/* Kiểu dáng danh sách và mục trong danh sách */
+.category-list {
+    list-style-type: none;
+    border-radius: 15px;
+    /* Loại bỏ chấm đánh dấu mặc định của danh sách */
+    padding: 10px;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ul li a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: black;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+ul li a:hover {
+    color: #e74c3c;
+    /* Đổi màu chữ khi di chuột qua */
+}
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    /* Khi di chuột qua, độ bóng mở rộng */
+    transform-origin: bottom left;
+}
+
+.slide-show {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.list-images {
+    transition: 0.5s;
+    display: flex;
+}
+
+.slide1-img {
+    width: 800px;
+    height: 350px;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn {
+    color: #999;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-left {
+    left: 15px;
+}
+
+.btn-right {
+    right: 15px;
+}
+
+.index-images {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.index-item {
+    border: 2px solid #999;
+    padding: 7px;
+    margin: 3px;
+    border-radius: 50%;
+}
+
+.active {
+    background-color: #999;
+}
+
+.ads-box {
+    width: calc(100% - 800px - 220px);
+    height: 350px;
+    margin-left: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.ads-box img {
+    width: 100%;
+    height: 105px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.hot-sale-box {
+    /* height: 450px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f98c4b;
+}
+
+.hot-sale-header {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Căn đều hai phần tử con */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 20px;
+    /* Tùy chọn: Thêm padding nếu cần */
+    border-radius: 15px;
+}
+
+.hot-sale-header h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.countdown {
+    text-align: right;
+}
+
+.time-tag {
+    font-weight: bold;
+}
+
+.timer {
+    /* border: 1px solid black; */
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+/* Phần sản phẩm ở hotsale */
+.product-slider{
+    margin-top: 10px;
+    padding: 10px 10px 30px 10px;
+}
+
+.product-item {
+    height: 340px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.product-image {
+    height: 200px;
+}
+
+.product-details {
+    margin: 7px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.product-title {
+    font-size: 20px;
+    color: #8e8fb5;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price .discounted-price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.product-price .original-price {
+    text-decoration: line-through;
+}
+
+.product-description {
+    font-size: 15px;
+}
+
+.stars {
+    color: yellow;
+}
+
+.brand-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.brand-box img {
+    width: 410px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.category-box2 {
+    margin-top: 20px;
+    /* height: 210px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.categoty-img {
+    /* display: block; */
+    width: 130px;
+    height: 150px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border: 5px solid #fdc0c8;
+    border-radius: 15px;
+}
+
+.categoty-img img {
+    width: 100%;
+    height: 125px;
+}
+
+.category-slide {
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+.category-item {
+    height: 120px;
+    background-color: #e74c3c;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.category-image {
+    height: 100px;
+}
+
+.category-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.category-name {
+    margin-top: 5px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.brand-category {
+    margin-top: 25px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.brand-category-header {
+    margin-bottom: 15px;
+}
+
+.list-brand {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-brand-left {
+    display: flex;
+    width: 405px;
+}
+
+.brand-left-item {
+    height: 100%;
+}
+
+.brand-left-item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.list-brand-left .slick-dots{
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    transform: translateX(-45%);
+}
+
+.list-brand-left .slick-dots button{
+    border-radius: 0;
+    width: 10px;
+    padding: 0;
+}
+
+.list-brand-right {
+    width: calc(100% - 400px - 15px);
+    height: 400px;
+    display: flex;
+}
+
+.brand-right-items {
+    height: 100%;
+}
+
+.brand-right-items .brand-item:nth-child(1){
+    margin-bottom: 10px;
+    height: calc(50% - 20px);
+}
+
+
+.brand-right-items .brand-item img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* phần gợi ý sản phẩm */
+
+.suggest-container{
+    padding-bottom: 50px;
+}
+
+.suggest-product {
+    margin: 15px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: left;
+}
+
+.suggest-header {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.suggest-product  .product-item {
+    width: 200px;
+    height: 340px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#loadMore {
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    background-color: #ffc2b8;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* phần footer */
+footer {
+    width: 100%;
+    background-color: #fdc0c8;
+}
+
+.footer-container {
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.infor-box {
+    line-height: 35px;
+}
+
+.infor-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.infor-box form button{
+    margin-top: 10px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.infor-header {
+    font-weight: bold;
+    font-size: 19px;
+}
+#login {
+    padding: 15px;
+    
+    
+}
+#login .sub_login {
+    width: 300px;
+    left: 1020px;
+    top: 50px;
+    position: absolute;
+    padding-top: 20px;
+    z-index: 1000;
+    /* display: ; */
+    background: #fff;
+    border: 1px solid #aaaaaa;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #333333;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#login .sub_login.show{
+    opacity: 1;
+    pointer-events: all;
+}
+.text_login {
+    margin-bottom: 5px;
+
+}
+#login .block_login 
+{
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid #dbdbdb;
+    
+    
+}
+.block_login a {
+    text-decoration: none;
+}
+.block_login_more 
+{
+    padding: 10px 20px 0 20px;
+    
+}
+.text_more_login 
+{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.alert_login
+{
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 13px;
+}
+#login #login_button_1
+{
+    width: 92%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#login a:hover {
+    transform: none;
+    color: none;
+    
+}
+
+
+#login a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: none;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: none;
+    transition:none;
+    /* Hiệu ứng chuyển động */
+}
+ .btn_popup_login
+{
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+.popup_register
+{
+    text-decoration: none;
+    color: #326e51;
+    font-size: 13px;
+}
+
+/* css popup_login*/
+
+#popup_login
+{
+    margin: 30px auto;
+    width: 420px;
+    background: #fff;
+}
+#popup_login form{
+    display: block;
+}
+#popup_login .popup_header_login #close_btn_login {
+        /* position: absolute;
+        right: 0px;
+        top: 0px; */
+        position: relative;
+        right: -400px;
+        top:-10px;
+        /* overflow: visible; */
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    
+}
+/* button .close_btn{
+    overflow: visible;
+    cursor: pointer;
+    border: 0;
+    
+    display: block;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+}
+.close_btn {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    right: 550px;
+    top: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 0 18px 10px;
+    color: #FFF;
+    background: #666;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace;
+} */
+#popup_login .sub_login {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    
+}
+#popup_login  .block_login {
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+#modal {
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6);
+    
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    color: #333333;
+
+
+}
+
+#modal.show {
+    opacity: 1;
+    pointer-events: all;
+
+}
+.popup_login_content 
+{
+    background: #fff;
+    
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 1000;
+}
+#popup_login #login_button
+{
+    width: 95%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.form_group {
+    margin-bottom: 15px;
+    z-index: 1000;
+}
+.popup_login_content .form-control {
+    padding-right: 30px;
+    font-size: 13px;
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+.popup_login_content .form-control:focus
+{
+    
+   
+    border: 1px solid rgb(178, 225, 238);
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px rgb(195, 231, 240);
+    box-shadow:   1px 1px 10px  rgb(173, 237, 230);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+}
+.popup_login_content .popup_forgot 
+{
+    float: right !important;
+    color: #326e51;
+}
+
+#popup_login .text_login {
+    margin-bottom: 5px;
+
+}
+
+#popup_login .block_login a {
+    text-decoration: none;
+}
+#popup_login .block_login_more 
+{
+    padding: 10px 20px 0 20px;
+    
+    
+}
+#popup_login .text_more_login 
+{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+#login_button_1
+{
+    width: 92%;
+    padding-top: 15x;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#popup_login .btn_popup_login
+{
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+#popup_login .popup_register
+{
+    text-decoration: none;
+    color: #326e51;
+    font-size: 13px;
+}
+/* popupregister*/
+#register {
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: all;
+    color: #333333;
+}
+#register.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.block_popup_register {
+    margin: 40px auto;
+    width: 420px;
+    background: #fff;
+
+
+}
+#register .popup_header_login #close_btn_register
+{
+    position: relative;
+    right: -400px;
+    top:-10px;
+    /* overflow: visible; */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+#register .popup_content 
+{
+    margin-top: -5px;
+    
+}
+.text_register 
+{
+    margin-bottom: 10px;
+}
+#register form{
+    display: block;
+
+}
+#register .form_group {
+    font-size: 13px;
+    margin-bottom:15px ;
+}
+#register input[type="text"],input[type="password"],input[type="email"]
+{
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+.code_register 
+{
+    position: relative;
+}
+.error
+
+{
+    color: #a94442;
+}
+#register .code_register button{
+    width: 100px;
+    background: #f60;
+    color: #fff;
+    border: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    height: 100%;
+
+}
+.form-control {
+    display: block;
+    outline: none;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+#register .form_group
+{
+    font-size: 13px;
+    display: block;
+   
+    
+}
+
+
+#register .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    
+}
+#register .col_register
+{   position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+
+}
+
+#register .radio_inline
+{
+    position: relative;
+    display: inline-block;
+    margin-left: -5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+#register .radio_inline input[type="radio"]
+{
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 4px;
+   
+}
+#register .group_birthday 
+{
+    display: flex;
+    justify-content: space-between;
+}
+#register .group_birthday .col_register_1
+{
+    
+
+    position: relative;
+    min-height: 1px;
+    width: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#register .btn_register
+{
+    width: 95%;
+
+    
+    background: #326e51;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    margin-top:10px;
+    margin-left: 17px;
+    margin-bottom: 20px;
+}
+#register .block_login
+{
+    padding: 20px 20px;
+    border-top: 1px solid #eaeaea;
+    font-size: 13px;
+    
+
+}
+#register .space_bottom 
+{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    
+}
+#register .block_login a {
+    color: #333333;
+    text-decoration: none;
+    outline: 0;
+
+
+}
+#register .form-control:focus
+{
+    
+   
+    border: 1px solid rgb(178, 225, 238);
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px rgb(195, 231, 240);
+    box-shadow:   1px 1px 10px  rgb(173, 237, 230);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+}
+#register:target
+{
+    display: block;
+}
+.form_group.invalid .form-control {
+    
+    border: 1px solid #f33a58 ;
+    border-radius: 4px;
+    -webkit-box-shadow:  1px 1px 0px 0px #f33a58;
+    box-shadow:   1px 1px 10px  #f33a58;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form_group.invalid .form_message {
+    color: #f33a58;
+}
+
+.form_message {
+    font-size: 10px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+

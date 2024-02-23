@@ -1,0 +1,372 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    
+}
+
+header {
+    width: 100%;
+    background-color: #fdc0c8;
+    /* background-image: linear-gradient(to bottom right, #fdc0c8, pink); */
+    color: #333;
+    
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn chỉnh các phần tử theo chiều ngang */
+    align-items: center;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    color: #333;
+    /* Màu chữ */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover {
+    color: #e74c3c;
+    /* Đổi màu chữ khi di chuột qua */
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    /* Màu đường viền độ bóng */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    /* Khi di chuột qua, độ bóng mở rộng */
+    transform-origin: bottom left;
+}
+
+header h1 {
+    font-size: 24px;
+    /* Hoặc giá trị nào đó mà bạn muốn */
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+form .search-container {
+    position: relative;
+}
+
+header form input[type="text"] {
+    width: 250px;
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa các ô input */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    border: 1px solid #ddd;
+    /* Đường viền ô input */
+    border-radius: 30px;
+    /* Góc bo tròn */
+}
+
+header form button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5px;
+    /* Tạo khoảng cách giữa ô input và nút submit */
+    padding: 10px;
+    /* Tăng padding để làm đẹp hơn */
+    background-color: transparent;
+    /* Loại bỏ màu nền nút submit */
+    border: none;
+    /* Loại bỏ đường viền của nút submit */
+    cursor: pointer;
+    /* Biến con trỏ thành bàn tay khi di chuột qua */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển động */
+}
+
+/* form button i {
+    color: #fff;
+} */
+
+header form button:hover i {
+    color: #e74c3c;
+    /* Đổi màu chữ biểu tượng khi di chuột qua */
+}
+nav {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+#my_order_page 
+{
+    margin-top: 50px;
+    width: 100%;
+    float: left;
+    
+    
+    
+}
+.left_order {
+    width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#my_order_page a{
+    text-decoration: none;
+    color: black;
+}
+#my_order_page .width_common{
+    
+    float: left;
+    width: 100%;
+    
+}
+#my_order_page .block_menu_profile
+{
+    background-color:white;
+    width: 25%;
+}
+#block_chitietdonhang{
+    
+    width:72%;
+    background-color:white;
+    float: right;
+    
+    margin-right: 10px;
+    
+    
+    
+}
+#block_chitietdonhang .container_detail
+{
+    padding: 20px;
+    margin-top: -10px;
+    display: block;
+    font-size: 15px;
+    
+}
+#block_chitietdonhang h1{
+    font-size: 18px;
+
+
+}
+.item_donhang_content {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    display: flex
+}
+#block_chitietdonhang .space_bottom_5 {
+    margin-bottom: 5px;
+}
+.orderid_col{
+    position: relative;
+    width: 25%;
+    
+
+}
+.item_status_donhang{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    width: 110px;
+    text-align: center;
+    background-color: #4b8c6c;
+}
+#block_chitietdonhang  .orderid_col .space_bottom_5 strong{
+    color: #326e51;
+}
+.infomation_col{
+    width: 41.1111111%;
+}
+.shipment_col
+{
+    width: 33.3333333%;
+    display: block;
+    margin-left: 50px;
+}
+.space_bottom_10{
+    margin-bottom: 10px;
+}
+#block_chitietdonhang .tb_chitiet_donhang{
+    
+    width: 100%;
+    border-left: 1px solid #e8e2e2;
+    border-top: 1px solid #e8e2e2;
+    border-right: 1px solid #e8e2e2;
+    font-size: 15px;
+    
+    
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    
+    
+}
+.block_detail_order_info{
+    margin-top: 50px;
+}
+.tb_chitiet_donhang .tb_header {
+    background-color:  whitesmoke;
+ 
+    
+
+}
+.tb_chitiet_donhang td{ 
+    padding: 10px 10px;
+border-bottom: 1px solid #e8e2e2;
+font-weight: 400;}
+.tb_chitiet_donhang tr {
+    display: table-row;
+    padding: 10px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.tb_chitiet_donhang .tb_header .col_sanpham{
+    width: 65%;
+    
+}
+.tb_chitiet_donhang .col_dongia
+{
+    width: 15%;
+}
+.tb_chitiet_donhang .col_soluong
+{
+    width: 10%;
+}
+.tb_chitiet_donhang .col_tamtinh
+{
+    width: 10%;
+}
+.product_order .product_order_detail
+{
+    display: flex;
+}
+.product_order .product_info_order strong
+{
+    color: #326e51;
+    
+}
+.product_order .text_info_item{
+    font-size: 15px;
+    color: #326e51;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.product_order .main_image_shopping img {
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+    border: 0px;
+    font-size: 0;
+    line-height: 0;
+    max-width: 100%;
+}
+.product_order .txt{
+    margin-bottom: 5px;
+    
+}
+.tfooter {
+    background-color: whitesmoke;
+
+}
+#block_chitietdonhang .text_right {
+    text-align: right;
+}
+.text_tb {
+    color: #326e51;
+}
+.text_thanhtien {
+    color: #ff6600;
+    font-size: 18px;
+}
+.text_center_back {
+    text-align: center;
+    margin-top: 30px;
+}
+.text_center_back i  {
+    color:#326e51;
+}
+.text_center_back .text_back {
+    color: #326e51;
+} 
+.text_center_back .text_danhgia {
+    color: #ff6600;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.block_info_profile
+{
+    padding: 20px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.block_info_profile img {
+    width: 70px;
+}
+.text_profile{
+    margin-left: 10px;
+ 
+}
+#my_order_page .menu_info {
+    
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    
+}
+#my_order_page .menu_info a {
+    display: block;
+    margin-bottom: 20px;
+}
+

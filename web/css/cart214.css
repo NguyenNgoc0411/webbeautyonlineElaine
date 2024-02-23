@@ -1,0 +1,103 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 2, 2024, 2:39:26 PM
+    Author     : luong
+*/
+
+.container {
+    width: calc(100%-100px);
+    display: flex;
+    margin: 0 50px 0 50px;
+    justify-content: space-evenly;
+}
+.cart-container {
+    width: calc(100% - 25%);
+}
+.quantityProductInput{
+    width: 50px;
+}
+.quantity-container{
+    display: flex;
+    justify-content: space-evenly
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.temp-price-container{
+    margin-top: 60px;
+    width: calc(100% - 80%);
+    height: 400px;
+}
+.temp-price {
+    display: flex;
+    justify-content: space-between;
+}
+.order-btn{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.order-btn button{
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    background: #f60;
+    border-radius: 3px;
+    height: 40px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+.product-price {
+    display: none;
+}
+
+.quantityProductInput {
+    text-align: center;
+    width: 30px !important;
+    margin: 0 5px 0 5px;
+}
+
+.quantityChange{
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fdc0c8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quantityChange:hover {
+    background-color: lavenderblush;
+}
+
+.no-outline {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.no-outline:hover{
+    color: #fdc0c8;
+}
+
+
+

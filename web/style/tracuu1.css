@@ -1,0 +1,73 @@
+.da_login{
+    width: 250px;
+    left: 1060px;
+    top: 50px;
+    position: absolute;
+    padding-top: 20px;
+    z-index: 1000;
+    /* display: ; */
+    background: #fff;
+    border: 1px solid #aaaaaa;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #333333;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#da_login_container {
+    padding: 15px;
+}
+#client_login.show{
+    opacity: 1;
+    pointer-events: all;
+}
+.block_da_login {
+    position: relative;
+    margin-left: 10px;
+    
+    
+}
+
+.item_da_login
+{
+    position: relative;
+    margin-left: 10px;
+    padding: 3px;
+    
+}
+.item_da_login a {
+    text-decoration: none;
+    color: black;
+    transition: none;
+    transform: none;
+}
+#client_login a:hover {
+    transform: none;
+    transition: none;
+    color: black;
+}
+.item_da_login i {
+    text-align: center;
+    width: 20px;
+    margin-right: 10px;
+    
+}
+
+#client_login a::after {
+
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: none;
+        /* Màu đường viền độ bóng */
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        /* Bắt đầu với chiều rộng là 0 */
+        transform-origin: none;
+        transition:none;
+        /* Hiệu ứng chuyển động */
+    
+}
